@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>PROJETO WEB - PEDRO LUCAS</title>
+    <!--ESTILOS-->
+	 <link rel="stylesheet" type="text/css" href="css/estilos.css" />   
+    <link rel="stylesheet" type="text/css" href="css/layout.css" />   
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />   
+    <!--estilos slidershow-->
+    
+<style>
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.easing.min.js"></script>	
+<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+  
+	<script type="text/javascript">
+	$(function () {
+		
+		var filterList = {
+		
+			init: function () {
+			
+				// MixItUp plugin
+				// http://mixitup.io
+				$('#portfoliolist').mixitup({
+					targetSelector: '.portfolio',
+					filterSelector: '.filter',
+					effects: ['fade'],
+					easing: 'snap',
+					// call the hover effect
+					onMixEnd: filterList.hoverEffect()
+				});				
+			
+			},
+			
+			hoverEffect: function () {
+			
+				// Simple parallax effect
+				$('#portfoliolist .portfolio').hover(
+					function () {
+						$(this).find('.label').stop().animate({bottom: 0}, 200, 'easeOutQuad');
+						$(this).find('img').stop().animate({top: -30}, 500, 'easeOutQuad');				
+					},
+					function () {
+						$(this).find('.label').stop().animate({bottom: -40}, 200, 'easeInQuad');
+						$(this).find('img').stop().animate({top: 0}, 300, 'easeOutQuad');								
+					}		
+				);				
+			
+			}
+
+		};
+		
+		// Run the show!
+		filterList.init();
+		
+		
+	});	
+	</script>   
+    
+  </head>
+  <body>
+    <table border="1">
+      <tbody>
+        <!--linha1-->
+        <tr height="150">
+          <td colspan="3" width="800"> <img src="sup.jpg" alt=""><br>
+          </td>
+        </tr>
+        <!--linha2-->
+        <tr bgcolor="#555">
+          <td colspan="3">
+          <div id="nav">
+	<ul>
+		<li><a href="empresa.html">Empresa</a></li>
+		<li><a href="filiais.html">Filiais</a></li>
+		<li><a href="televnd.html">Televendas</a></li>                                
+		<li><a href="#">Produtos</a>
+			<ul>
+				<li><a href="telefo.html">Telefonia</a></li>
+				<li><a href="info.html">Informática</a></li>
+				<li><a href="utili.html">Utilidades</a></li>
+				<li><a href="dvd.html">DVD</a></li>
+				<li><a href="livro.html">Livro</a></li>
+				<li><a href="esporte.html">Esporte</a></li>                                                
+			</ul> 
+		</li>
+		<li class="promocoes"><a href="promocoes.html">AS PROMOÇÕES DO DIA</a></li>
+		<li><a href="contato.html">Fale Conosco</a></li>
+	</ul>
+</div>
+          </td>
+        </tr>
+        <!--linha3-->
+        <tr height="300">
+          <td colspan="3">
+          <div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="slider 1.png" style="width:100%">
+  <div class="text">Caption Text</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="slider 2.png" style="width:100%">
+  <div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="slider 3.png" style="width:100%">
+  <div class="text">Caption Three</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+          </td>
+        </tr>
+        <!--linha4-->
+        <tr height="500">
+          <td colspan="3">
+         <h1 align="center">DESTAQUES DE HOJE</h1> 
+       <hr>
+
+<ul id="filters" class="clearfix">
+	<li><span class="filter active" data-filter="comprados tecnologia filmes promocao web">Todos</span></li>
+	<li><span class="filter" data-filter="comprados">Mais comprados</span></li>
+	<li><span class="filter" data-filter="tecnologia">Tecnologia</span></li>
+	<li><span class="filter" data-filter="filmes">Filmes</span></li>
+	<li><span class="filter" data-filter="promocao">Promoção</span></li>
+	
+	<!-- A PROPRIEDADE DATA-FILTER DETERMINA QUAIS SÃO AS CATEGORIAS QUE SERÃO FILTRADAS 
+	PERCEBA QUE EM CADA <div class="portfolio comprados" data-cat="comprados"> TEMOS A CATEGORIA
+	DETERMINADA DUAS VEZES. VEJA ABAIXO: -->
+
+</ul>
+
+<div id="portfoliolist">		
+
+<!-- INÍCIO DO TRECHO DO CÓDIGO QUE VOCÊ DEVERÁ: COPIAR, COLAR E ALTERAR PARA CRIAR OUTROS PRODUTOS -->
+	<div class="portfolio comprados" data-cat="comprados"> <!-- DETERMINE AS CATEGORIAS -->
+		<div class="portfolio-wrapper">				
+			<img src="mini/barraca.jpg" width="200" alt="" />
+			<div class="label">
+				<div class="label-text">
+					<a class="text-title">Barraca</a>
+					<span class="text-category">Mais comprados</span>
+				</div>
+				<div class="label-bg"></div>
+			</div>
+		</div>
+	</div>
+<!-- FIM DO TRECHO DO CÓDIGO QUE VOCÊ DEVERÁ: COPIAR, COLAR E ALTERAR PARA CRIAR OUTROS PRODUTOS -->
+
+
+<!-- INÍCIO DO TRECHO DO CÓDIGO QUE VOCÊ DEVERÁ: COPIAR, COLAR E ALTERAR PARA CRIAR OUTROS PRODUTOS -->
+	<div class="portfolio filmes" data-cat="filmes"> <!-- DETERMINE AS CATEGORIAS -->
+		<div class="portfolio-wrapper">				
+			<img src="mini/prison.jpg" width="200" alt="" />
+			<div class="label">
+				<div class="label-text">
+					<a class="text-title">Prison Break</a>
+					<span class="text-category">Filmes</span>
+				</div>
+				<div class="label-bg"></div>
+			</div>
+		</div>
+	</div>
+<!-- FIM DO TRECHO DO CÓDIGO QUE VOCÊ DEVERÁ: COPIAR, COLAR E ALTERAR PARA CRIAR OUTROS PRODUTOS -->
+
+
+<!-- INÍCIO DO TRECHO DO CÓDIGO QUE VOCÊ DEVERÁ: COPIAR, COLAR E ALTERAR PARA CRIAR OUTROS PRODUTOS -->
+	<div class="portfolio tecnologia" data-cat="tecnologia"> <!-- DETERMINE AS CATEGORIAS -->
+		<div class="portfolio-wrapper">				
+			<img src="mini/router.jpg" width="200" alt="" />
+			<div class="label">
+				<div class="label-text">
+					<a class="text-title">Router Wifi</a>
+					<span class="text-category">Tecnologia</span>
+				</div>
+				<div class="label-bg"></div>
+			</div>
+		</div>
+	</div>
+<!-- FIM DO TRECHO DO CÓDIGO QUE VOCÊ DEVERÁ: COPIAR, COLAR E ALTERAR PARA CRIAR OUTROS PRODUTOS -->
+
+
+<!-- INÍCIO DO TRECHO DO CÓDIGO QUE VOCÊ DEVERÁ: COPIAR, COLAR E ALTERAR PARA CRIAR OUTROS PRODUTOS -->
+	<div class="portfolio promocao" data-cat="promocao"> <!-- DETERMINE AS CATEGORIAS -->
+		<div class="portfolio-wrapper">				
+			<img src="mini/churro.jpg" width="200" alt="" />
+			<div class="label">
+				<div class="label-text">
+					<a class="text-title">Kit churrasco</a>
+					<span class="text-category">Promoção</span>
+				</div>
+				<div class="label-bg"></div>
+			</div>
+		</div>
+	</div>
+<!-- FIM DO TRECHO DO CÓDIGO QUE VOCÊ DEVERÁ: COPIAR, COLAR E ALTERAR PARA CRIAR OUTROS PRODUTOS -->
+<br>
+
+
+<!-- INÍCIO DO TRECHO DO CÓDIGO QUE VOCÊ DEVERÁ: COPIAR, COLAR E ALTERAR PARA CRIAR OUTROS PRODUTOS -->
+	<div class="portfolio promocao" data-cat="promocao"> <!-- DETERMINE AS CATEGORIAS -->
+		<div class="portfolio-wrapper">				
+			<img src="mini/panelas.jpg" width="200" alt="" />
+			<div class="label">
+				<div class="label-text">
+					<a class="text-title">Jogo de Panelas</a>
+					<span class="text-category">Promoção</span>
+				</div>
+				<div class="label-bg"></div>
+			</div>
+		</div>
+	</div>
+<!-- FIM DO TRECHO DO CÓDIGO QUE VOCÊ DEVERÁ: COPIAR, COLAR E ALTERAR PARA CRIAR OUTROS PRODUTOS -->
+
+
+
+<!-- INÍCIO DO TRECHO DO CÓDIGO QUE VOCÊ DEVERÁ: COPIAR, COLAR E ALTERAR PARA CRIAR OUTROS PRODUTOS -->
+	<div class="portfolio comprados" data-cat="comprados"> <!-- DETERMINE AS CATEGORIAS -->
+		<div class="portfolio-wrapper">				
+			<img src="mini/caloi.jpg" width="200" alt="" />
+			<div class="label">
+				<div class="label-text">
+					<a class="text-title">bicicleta</a>
+					<span class="text-category">Mais Comprados</span>
+				</div>
+				<div class="label-bg"></div>
+			</div>
+		</div>
+	</div>
+<!-- FIM DO TRECHO DO CÓDIGO QUE VOCÊ DEVERÁ: COPIAR, COLAR E ALTERAR PARA CRIAR OUTROS PRODUTOS -->
+
+
+
+<!-- INÍCIO DO TRECHO DO CÓDIGO QUE VOCÊ DEVERÁ: COPIAR, COLAR E ALTERAR PARA CRIAR OUTROS PRODUTOS -->
+	<div class="portfolio filmes" data-cat="filmes"> <!-- DETERMINE AS CATEGORIAS -->
+		<div class="portfolio-wrapper">				
+			<img src="mini/supernat.jpg" width="200" alt="" />
+			<div class="label">
+				<div class="label-text">
+					<a class="text-title">Supernatural</a>
+					<span class="text-category">Filmes</span>
+				</div>
+				<div class="label-bg"></div>
+			</div>
+		</div>
+	</div>
+<!-- FIM DO TRECHO DO CÓDIGO QUE VOCÊ DEVERÁ: COPIAR, COLAR E ALTERAR PARA CRIAR OUTROS PRODUTOS -->
+
+
+
+<!-- INÍCIO DO TRECHO DO CÓDIGO QUE VOCÊ DEVERÁ: COPIAR, COLAR E ALTERAR PARA CRIAR OUTROS PRODUTOS -->
+	<div class="portfolio tecnologia" data-cat="tecnologia"> <!-- DETERMINE AS CATEGORIAS -->
+		<div class="portfolio-wrapper">				
+			<img src="mini/semfio.jpg" width="200" alt="" />
+			<div class="label">
+				<div class="label-text">
+					<a class="text-title">Telefone sem Fio</a>
+					<span class="text-category">Tecnologia</span>
+				</div>
+				<div class="label-bg"></div>
+			</div>
+		</div>
+	</div>
+<!-- FIM DO TRECHO DO CÓDIGO QUE VOCÊ DEVERÁ: COPIAR, COLAR E ALTERAR PARA CRIAR OUTROS PRODUTOS -->
+
+
+
+
+</div>	
+          </td>
+          
+          
+        </tr>
+        
+        <!--linha5-->
+        <tr height="100">
+          <td colspan="3"><h1 align="center">CONTINUE COM A LOW PRICE</h1>
+          </td>
+        </tr>
+        <!--linha6-->
+        <tr height="300">
+          <td><img src="IMAGENS PROJETO/online.png" width="266" height="300">
+          </td>
+          <td><img src="IMAGENS PROJETO/col-1.jpg" width="266" height="300">
+          </td>
+          <td><img src="IMAGENS PROJETO/col-3.jpg" width="266" height="300">
+          </td>
+        </tr>
+        <!--linha7-->
+        <tr height="50">
+          <td colspan="3" bgcolor="#000000">
+          <address>
+          <font size="2" color="#eee">
+          <p align="center">Site por Pedro Lucas</p>
+          </font>
+          </address>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p><br>
+    </p>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+
+
+<ul id="filters" class="clearfix">
+	<li><span class="filter active" data-filter="comprados tecnologia filmes promocao web">Todos</span></li>
+	<li><span class="filter" data-filter="comprados">Mais comprados</span></li>
+	<li><span class="filter" data-filter="tecnologia">Tecnologia</span></li>
+	<li><span class="filter" data-filter="filmes">Filmes</span></li>
+	<li><span class="filter" data-filter="promocao">Promoção</span></li>
+	
+	<!-- A PROPRIEDADE DATA-FILTER DETERMINA QUAIS SÃO AS CATEGORIAS QUE SERÃO FILTRADAS 
+	PERCEBA QUE EM CADA <div class="portfolio comprados" data-cat="comprados"> TEMOS A CATEGORIA
+	DETERMINADA DUAS VEZES. VEJA ABAIXO: -->
+
+</ul>
+
+<div id="portfoliolist">		
+
+<!-- INÍCIO DO TRECHO DO CÓDIGO QUE VOCÊ DEVERÁ: COPIAR, COLAR E ALTERAR PARA CRIAR OUTROS PRODUTOS -->
+	<div class="portfolio comprados" data-cat="comprados"> <!-- DETERMINE AS CATEGORIAS -->
+		<div class="portfolio-wrapper">				
+			<img src="img/mini/barraca.jpg" width="200" alt="" />
+			<div class="label">
+				<div class="label-text">
+					<a class="text-title">Barraca</a>
+					<span class="text-category">Logo</span>
+				</div>
+				<div class="label-bg"></div>
+			</div>
+		</div>
+	</div>
+<!-- FIM DO TRECHO DO CÓDIGO QUE VOCÊ DEVERÁ: COPIAR, COLAR E ALTERAR PARA CRIAR OUTROS PRODUTOS -->
+
+</div>	

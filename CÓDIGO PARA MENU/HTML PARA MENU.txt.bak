@@ -1,0 +1,19 @@
+        <div id="nav">
+			<ul>
+				<li><a href="">Empresa</a></li>
+				<li><a href="">Filiais</a></li>
+				<li><a href="">Televendas</a></li>                                
+				<li><a href="">Produtos</a>
+					<ul>
+						<li><a href="">Telefonia</a></li>
+						<li><a href="">Informática</a></li>
+						<li><a href="">Utilidades</a></li>
+						<li><a href="">DVD</a></li>
+						<li><a href="">Livro</a></li>
+						<li><a href="">Esporte</a></li>                                                
+					</ul> 
+				</li>
+		                <li class="promocoes"><a href="">AS PROMOÇÕES DO DIA</a></li>
+				<li><a href="">Fale Conosco</a></li>
+			</ul>
+	</div>
